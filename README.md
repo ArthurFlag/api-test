@@ -4,5 +4,6 @@
 
 ```bash
 npm install
-openapi preview-docs openapi.yaml
+openapi lint openapi.yaml
+scalar serve openapi.yaml
 ```
