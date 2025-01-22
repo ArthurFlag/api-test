@@ -1,0 +1,32 @@
+type: object
+description: Group
+properties:
+  create_time:
+    type: string
+    description: User group creation time in RFC format.
+    maxLength: 36
+    example: '2021-09-01T12:00:00Z'
+  description:
+    type: string
+    description: Human-readable description of the group.
+    maxLength: 4096
+    example: Users based in Helsinki
+  managed_by_scim:
+    type: boolean
+    description: Managed By Scim
+    example: false
+  update_time:
+    type: string
+    description: User group last update time
+    maxLength: 36
+    example: '2021-09-03T12:00:00Z'
+  user_group_id:
+    type: string
+    description: User Group ID
+    maxLength: 36
+    example: 12345678-1234-1234-1234-123456789012
+  user_group_name:
+    type: string
+    description: User Group Name
+    maxLength: 128
+    example: Helsinki Users

@@ -1,0 +1,29 @@
+description: Request conflict
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        message:
+          type: string
+          description: Human readable error message
+        errors:
+          type: array
+          description: List of error details. Typically there is only one element.
+          items:
+            type: object
+            properties:
+              message:
+                type: string
+                description: Human readable error message.
+                example: Cannot perform operation on SCIM managed resource
+              error_code:
+                type: string
+                enum:
+                  - resource_managed_by_scim
+                description: |
+                  Possible values:
+                    - `resource_managed_by_scim`: Cannot perform operation on SCIM managed resource
+required:
+  - description
+  - user_group_name

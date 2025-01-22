@@ -1,0 +1,68 @@
+type: object
+description: UserGroupMemberListResponse
+properties:
+  members:
+    type: array
+    description: User group members
+    items:
+      type: object
+      properties:
+        last_activity_time:
+          type: string
+          description: Last Activity Time
+          maxLength: 36
+        user_id:
+          type: string
+          description: User ID
+        user_info:
+          type: object
+          description: OrganizationUserInfo
+          properties:
+            city:
+              type: string
+              description: City
+            country:
+              type: string
+              description: Country
+            create_time:
+              type: string
+              description: Creation time
+              maxLength: 36
+            department:
+              type: string
+              description: Department
+            is_application_user:
+              type: boolean
+              description: Is Application User
+            job_title:
+              type: string
+              description: Job Title
+            managed_by_scim:
+              type: boolean
+              description: Managed By Scim
+            managing_organization_id:
+              type: string
+              description: Managing Organization ID
+              maxLength: 36
+            real_name:
+              type: string
+              description: Real Name
+              maxLength: 256
+            state:
+              type: string
+              description: State
+            user_email:
+              type: string
+              description: User Email
+          required:
+            - create_time
+            - is_application_user
+            - managed_by_scim
+            - real_name
+            - state
+            - user_email
+      required:
+        - user_id
+        - user_info
+required:
+  - members

@@ -1,0 +1,10 @@
+type: object
+description: UserGroupGetResponse
+$ref: ./group.yaml
+required:
+  - create_time
+  - description
+  - managed_by_scim
+  - update_time
+  - user_group_id
+  - user_group_name

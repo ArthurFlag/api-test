@@ -1,0 +1,16 @@
+type: object
+description: UserGroupCreateRequestBody
+properties:
+  description:
+    type: string
+    description: The human-readable description of the group.
+    maxLength: 4096
+    example: Users based in Helsinki
+  user_group_name:
+    type: string
+    description: User Group Name
+    maxLength: 128
+    example: Helsinki Users
+required:
+  - description
+  - user_group_name

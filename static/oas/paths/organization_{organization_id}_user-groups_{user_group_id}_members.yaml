@@ -1,0 +1,20 @@
+get:
+  summary: List group members
+  tags:
+    - Groups
+  operationId: UserGroupMemberList
+  description: List members of a user group
+  parameters:
+    - $ref: ../components/parameters/organization_id.yaml
+    - $ref: ../components/parameters/user_group_id.yaml
+  responses:
+    '200':
+      description: Response
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/UserGroupMemberListResponse.yaml
+  security:
+    - tokenAuth: []
+      oauth2:
+        - accounts:read

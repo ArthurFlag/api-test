@@ -1,0 +1,46 @@
+post:
+  summary: Create a group
+  tags:
+    - Groups
+  operationId: UserGroupCreate
+  description: >-
+    Create a new user group in an organization. You can also do this via the
+    Aiven Console. See [the
+    docs](https://aiven.io/docs/platform/howto/manage-groups).
+  parameters:
+    - $ref: ../components/parameters/organization_id.yaml
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/UserGroupCreateRequestBody.yaml
+  responses:
+    '200':
+      description: Response
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/UserGroupCreateResponse.yaml
+  security:
+    - tokenAuth: []
+      oauth2:
+        - accounts:write
+get:
+  summary: List groups
+  tags:
+    - Groups
+  operationId: UserGroupsList
+  description: List all user groups within an organization
+  parameters:
+    - $ref: ../components/parameters/organization_id.yaml
+  responses:
+    '200':
+      description: Response
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/UserGroupsListResponse.yaml
+  security:
+    - tokenAuth: []
+      oauth2:
+        - accounts:read

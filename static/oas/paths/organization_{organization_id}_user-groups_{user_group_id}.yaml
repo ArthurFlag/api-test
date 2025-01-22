@@ -1,0 +1,66 @@
+delete:
+  summary: Delete a group
+  tags:
+    - Groups
+  operationId: UserGroupDelete
+  description: Delete a user group from an organization
+  parameters:
+    - $ref: ../components/parameters/organization_id.yaml
+    - $ref: ../components/parameters/user_group_id.yaml
+  responses:
+    '204':
+      description: Delete a group
+      content: {}
+    '409':
+      $ref: ../components/schemas/error409.yaml
+  security:
+    - tokenAuth: []
+      oauth2:
+        - accounts:write
+get:
+  summary: Retrieve a group
+  tags:
+    - Groups
+  operationId: UserGroupGet
+  description: Retrieve the details of a user group
+  parameters:
+    - $ref: ../components/parameters/organization_id.yaml
+    - $ref: ../components/parameters/user_group_id.yaml
+  responses:
+    '200':
+      description: Response
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/UserGroupGetResponse.yaml
+  security:
+    - tokenAuth: []
+      oauth2:
+        - accounts:read
+patch:
+  summary: Update a group
+  tags:
+    - Groups
+  operationId: UserGroupUpdate
+  description: Update details of a user group
+  parameters:
+    - $ref: ../components/parameters/organization_id.yaml
+    - $ref: ../components/parameters/user_group_id.yaml
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/UserGroupUpdateRequestBody.yaml
+  responses:
+    '200':
+      description: Response
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/UserGroupUpdateResponse.yaml
+    '409':
+      $ref: ../components/schemas/error409.yaml
+  security:
+    - tokenAuth: []
+      oauth2:
+        - accounts:write

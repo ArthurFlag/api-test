@@ -1,0 +1,30 @@
+type: object
+description: OrganizationAuthenticationConfigGetResponse
+properties:
+  oauth_enabled:
+    type: boolean
+    description: Organization users are able to use OAuth authentication.
+  password_auth_enabled:
+    type: boolean
+    description: Organization users are able to use password authentication.
+  personal_tokens_enabled:
+    type: boolean
+    description: >-
+      Organization users can use their personal tokens to access the
+      organization through the Aiven API or other applications.
+  personal_tokens_require_allowed_auth_method:
+    type: boolean
+    description: >-
+      Organization users are able to use personal tokens that were generated
+      from one of the allowed authentication methods.
+  saml_allow_external:
+    type: boolean
+    description: >-
+      Organization users are able to use SAML authentication of other
+      organizations.
+  saml_enabled:
+    type: boolean
+    description: Organization users are able to use SAML authentication.
+  two_factor_required:
+    type: boolean
+    description: 2FA is required to access resources in this organization.
