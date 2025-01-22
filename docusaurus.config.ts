@@ -78,6 +78,20 @@ const config: Config = {
         showNavLink: true, // optional, default is true
         configuration: {
           spec: {
+            url: "oas/openapi-src.json",
+          },
+        },
+      } as ScalarOptions,
+    ],
+    [
+      "@scalar/docusaurus",
+      {
+        id: "api2",
+        label: "API reference new",
+        route: "/docs/api2",
+        showNavLink: true, // optional, default is true
+        configuration: {
+          spec: {
             url: "oas/openapi.yaml",
           },
         },
