@@ -10,7 +10,6 @@ delete:
   responses:
     '204':
       description: Delete a group
-      content: {}
     '409':
       $ref: ../components/schemas/error409.yaml
   security:

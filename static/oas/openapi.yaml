@@ -61,12 +61,12 @@ tags:
       url: https://aiven.io/docs/platform/howto/manage-groups
 paths:
   /organization/{organization_id}/user-groups:
-    $ref: paths/organization_{organization_id}_user-groups.yaml
+    $ref: paths/organization_organization_id_user-groups.yaml
   /organization/{organization_id}/user-groups/{user_group_id}:
-    $ref: paths/organization_{organization_id}_user-groups_{user_group_id}.yaml
+    $ref: paths/organization_organization_id_user-groups_user_group_id.yaml
   /organization/{organization_id}/user-groups/{user_group_id}/members:
     $ref: >-
-      paths/organization_{organization_id}_user-groups_{user_group_id}_members.yaml
+      paths/organization_organization_id_user-groups_user_group_id_members.yaml
 components:
   securitySchemes:
     tokenAuth:

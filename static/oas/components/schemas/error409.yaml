@@ -24,6 +24,7 @@ content:
                 description: |
                   Possible values:
                     - `resource_managed_by_scim`: Cannot perform operation on SCIM managed resource
-required:
-  - description
-  - user_group_name
+      required:
+        - description
+        - user_group_name
+  
