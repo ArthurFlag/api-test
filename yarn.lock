@@ -5696,6 +5696,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@scalar/api-reference-react@npm:0.4.15":
+  version: 0.4.15
+  resolution: "@scalar/api-reference-react@npm:0.4.15"
+  dependencies:
+    "@scalar/api-reference": "npm:1.25.106"
+  peerDependencies:
+    react: ^19.0.0
+  checksum: 10c0/d624ffbc82b33b76564c2b2846578136ae8916fe8c45943c86d87d3159b366601e961224bbbab8d9cca8ff6082c6ddb9dfb8c477834f74f50fe7f42f37a9f2f4
+  languageName: node
+  linkType: hard
+
 "@scalar/api-reference@npm:1.25.106":
   version: 1.25.106
   resolution: "@scalar/api-reference@npm:1.25.106"
@@ -5801,6 +5812,17 @@ __metadata:
   dependencies:
     "@sinclair/typebox": "npm:^0.33.3"
   checksum: 10c0/4344ee0385927025bfd34acda9a5bad024fae982c3d1adcec6c200c368d38ef43882f25cebdf8ff745bfa2d865fcd02a088ff893ed0dd0d5a4885b3cbd7b9b9f
+  languageName: node
+  linkType: hard
+
+"@scalar/docusaurus@npm:^0.4.184":
+  version: 0.4.184
+  resolution: "@scalar/docusaurus@npm:0.4.184"
+  dependencies:
+    "@scalar/api-reference-react": "npm:0.4.15"
+  peerDependencies:
+    react: ^18.0.0
+  checksum: 10c0/9e50505040fa2a6d5b51ccb68d803917c2c4b441e84d0c75b1044b6e0bbffd45c4c5ade4ce2a931f8fd0a0a01c99b5a834432eb63ff91de37210f2aa5422b52a
   languageName: node
   linkType: hard
 
@@ -7815,6 +7837,7 @@ __metadata:
     "@mdx-js/react": "npm:^3.0.0"
     "@redocly/cli": "npm:^1.27.2"
     "@scalar/cli": "npm:^0.2.289"
+    "@scalar/docusaurus": "npm:^0.4.184"
     "@types/lodash": "npm:^4"
     "@types/node": "npm:^22.10.7"
     "@types/react": "npm:^18.2.48"

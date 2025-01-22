@@ -3,6 +3,7 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
+import type { ScalarOptions } from "@scalar/docusaurus";
 
 const currentMonth = new Date().getMonth();
 const isJune = currentMonth === 5;
@@ -64,7 +65,25 @@ const config: Config = {
       crossorigin: "anonymous",
     },
   ],
-  plugins: ["./src/plugins/svg-fix/index.ts", "docusaurus-plugin-image-zoom"],
+
+  plugins: [
+    "./src/plugins/svg-fix/index.ts",
+    "docusaurus-plugin-image-zoom",
+    [
+      "@scalar/docusaurus",
+      {
+        id: "api",
+        label: "API reference",
+        route: "/docs/api",
+        showNavLink: true, // optional, default is true
+        configuration: {
+          spec: {
+            url: "oas/openapi.yaml",
+          },
+        },
+      } as ScalarOptions,
+    ],
+  ],
   themeConfig: {
     image: "images/site-preview.png",
     navbar: {
@@ -81,11 +100,11 @@ const config: Config = {
           position: "left",
           label: "Docs",
         },
-        {
-          label: "API reference",
-          position: "left",
-          href: "https://api.aiven.io/doc/",
-        },
+        // {
+        //   label: "API reference",
+        //   position: "left",
+        //   to: "/api",
+        // },
         {
           type: "doc",
           position: "left",

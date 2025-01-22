@@ -29,6 +29,7 @@
     "@mdx-js/react": "^3.0.0",
     "@redocly/cli": "^1.27.2",
     "@scalar/cli": "^0.2.289",
+    "@scalar/docusaurus": "^0.4.184",
     "@types/node": "^22.10.7",
     "@types/react": "^18.2.48",
     "algoliasearch": "^5.19.0",
