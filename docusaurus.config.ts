@@ -66,6 +66,10 @@ const config: Config = {
             spec: "static/oas/openapi-bundled.yaml",
             route: "/redoc/",
           },
+          {
+            spec: "static/oas/openapi-src.json",
+            route: "/redocfull/",
+          },
         ],
         // Theme Options for modifying how redoc renders them
         theme: {
@@ -142,9 +146,14 @@ const config: Config = {
           label: "Support",
         },
         {
-          label: "API (Redoc)",
+          label: "API (partial - Redoc)",
           position: "left",
           to: "/docs/redoc/",
+        },
+        {
+          label: "API (whole - Redoc)",
+          position: "left",
+          to: "/docs/redocfull/",
         },
         {
           label: "Changelog",
