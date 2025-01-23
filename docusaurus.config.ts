@@ -99,6 +99,7 @@ const config: Config = {
           spec: {
             url: "oas/openapi-bundled.yaml",
           },
+          hideModels: true,
         },
       } as ScalarOptions,
     ],
@@ -113,6 +114,7 @@ const config: Config = {
           spec: {
             url: "oas/openapi-src.json",
           },
+          hideModels: true,
         },
       } as ScalarOptions,
     ],
