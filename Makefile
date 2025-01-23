@@ -66,3 +66,6 @@ preview:
 
 preview-redocly:
 	openapi preview-docs ./static/oas/openapi.yaml
+	
+bundle:
+	openapi bundle ./static/oas/openapi.yaml -o ./static/oas/openapi-bundled.yaml

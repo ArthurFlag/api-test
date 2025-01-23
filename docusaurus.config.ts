@@ -73,7 +73,7 @@ const config: Config = {
       "@scalar/docusaurus",
       {
         id: "api",
-        label: "API reference",
+        label: "API ref (legacy)",
         route: "/docs/api",
         showNavLink: true, // optional, default is true
         configuration: {
@@ -87,12 +87,12 @@ const config: Config = {
       "@scalar/docusaurus",
       {
         id: "api2",
-        label: "API reference new",
+        label: "API reference",
         route: "/docs/api2",
         showNavLink: true, // optional, default is true
         configuration: {
           spec: {
-            url: "oas/openapi.yaml",
+            url: "oas/openapi-bundled.yaml",
           },
         },
       } as ScalarOptions,

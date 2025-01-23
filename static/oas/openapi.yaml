@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.0.0
 info:
   description: >
     Aiven is a modern fully-managed open source data platform for streaming,
