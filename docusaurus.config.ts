@@ -4,6 +4,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import type { ScalarOptions } from "@scalar/docusaurus";
+import type * as Redocusaurus from "redocusaurus";
 
 const currentMonth = new Date().getMonth();
 const isJune = currentMonth === 5;
@@ -55,6 +56,24 @@ const config: Config = {
         },
       } satisfies Preset.Options,
     ],
+    [
+      "redocusaurus",
+      {
+        // Plugin Options for loading OpenAPI files
+        specs: [
+          // You can also pass it a OpenAPI spec URL
+          {
+            spec: "static/oas/openapi-bundled.yaml",
+            route: "/redoc/",
+          },
+        ],
+        // Theme Options for modifying how redoc renders them
+        theme: {
+          // Change with your site colors
+          primaryColor: "#1890ff",
+        },
+      },
+    ] satisfies Redocusaurus.PresetEntry,
   ],
   stylesheets: [
     {
@@ -72,13 +91,13 @@ const config: Config = {
     [
       "@scalar/docusaurus",
       {
-        id: "api",
-        label: "API ref (legacy)",
-        route: "/docs/api",
+        id: "api2",
+        label: "API (Scalar)",
+        route: "/docs/api2",
         showNavLink: true, // optional, default is true
         configuration: {
           spec: {
-            url: "oas/openapi-src.json",
+            url: "oas/openapi-bundled.yaml",
           },
         },
       } as ScalarOptions,
@@ -86,13 +105,13 @@ const config: Config = {
     [
       "@scalar/docusaurus",
       {
-        id: "api2",
-        label: "API reference",
-        route: "/docs/api2",
+        id: "api",
+        label: "API (whole)",
+        route: "/docs/api",
         showNavLink: true, // optional, default is true
         configuration: {
           spec: {
-            url: "oas/openapi-bundled.yaml",
+            url: "oas/openapi-src.json",
           },
         },
       } as ScalarOptions,
@@ -114,16 +133,16 @@ const config: Config = {
           position: "left",
           label: "Docs",
         },
-        // {
-        //   label: "API reference",
-        //   position: "left",
-        //   to: "/api",
-        // },
         {
           type: "doc",
           position: "left",
           docId: "platform/howto/support",
           label: "Support",
+        },
+        {
+          label: "API (Redoc)",
+          position: "left",
+          to: "/docs/redoc/",
         },
         {
           label: "Changelog",
