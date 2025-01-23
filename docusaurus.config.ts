@@ -92,7 +92,7 @@ const config: Config = {
       "@scalar/docusaurus",
       {
         id: "api2",
-        label: "API (Scalar)",
+        label: "API (partial - Scalar)",
         route: "/docs/api2",
         showNavLink: true, // optional, default is true
         configuration: {
@@ -107,7 +107,7 @@ const config: Config = {
       "@scalar/docusaurus",
       {
         id: "api",
-        label: "API (whole)",
+        label: "API (whole - Scalar)",
         route: "/docs/api",
         showNavLink: true, // optional, default is true
         configuration: {
